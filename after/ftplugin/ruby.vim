@@ -1,1 +1,1 @@
-let b:surround_35 = "#{\r}"
+setlocal tabstop=2
