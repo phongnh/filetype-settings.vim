@@ -43,6 +43,9 @@ augroup FiletypeSettingsPlugin
     autocmd BufNewFile,BufRead {,*}.tigrc setfiletype tigrc
     autocmd FileType tigrc setlocal noexpandtab tabstop=8 commentstring=#\ %s
 
+    " haml
+    autocmd BufNewFile,BufRead *.ink-haml setfiletype haml
+
     " Ruby-related
     autocmd FileType ruby,eruby,yaml,haml,markdown,less,sass,scss,coffee,cucumber,html.handlebars setlocal tabstop=2 shiftwidth=2
 
