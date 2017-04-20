@@ -44,7 +44,7 @@ augroup FiletypeSettingsPlugin
     autocmd FileType tigrc setlocal noexpandtab tabstop=8 commentstring=#\ %s
 
     " Ruby-related
-    autocmd FileType ruby,eruby,yaml,haml,markdown,less,sass,scss,coffee,html.handlebars setlocal tabstop=2 shiftwidth=2
+    autocmd FileType ruby,eruby,yaml,haml,markdown,less,sass,scss,coffee,cucumber,html.handlebars setlocal tabstop=2 shiftwidth=2
 
     autocmd FileType ruby,yaml,eruby,coffee,haml let b:surround_35 = "#{\r}"
     autocmd FileType eruby let b:surround_45 = "<% \r %>"
