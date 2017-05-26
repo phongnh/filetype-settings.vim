@@ -49,9 +49,17 @@ augroup FiletypeSettingsPlugin
     " Ruby-related
     autocmd FileType ruby,eruby,yaml,haml,markdown,less,sass,scss,coffee,cucumber,html.handlebars setlocal tabstop=2 shiftwidth=2
 
-    autocmd FileType ruby,yaml,eruby,coffee,haml let b:surround_35 = "#{\r}"
-    autocmd FileType eruby let b:surround_45 = "<% \r %>"
-    autocmd FileType eruby let b:surround_61 = "<%= \r %>"
+    autocmd FileType ruby,yaml,eruby,coffee,haml let b:surround_{char2nr('#')} = "#{\r}"
+    autocmd FileType eruby
+                \ let b:surround_{char2nr('-')} = "<% \r %>"  |
+                \ let b:surround_{char2nr('=')} = "<%= \r %>"
+
+    " RSpec
+    autocmd BufNewFile,BufRead *_spec.rb
+                \ let b:surround_{char2nr('e')} = "expect(\r)"    |
+                \ let b:surround_{char2nr('E')} = "expect { \r }" |
+                \ let b:surround_{char2nr('a')} = "allow(\r)"     |
+                \ let b:surround_{char2nr('A')} = "allow { \r }"
 
     " CSS / Less
     autocmd FileType css,less setlocal iskeyword+=-
@@ -91,7 +99,7 @@ augroup FiletypeSettingsPlugin
 
     " nginx
     autocmd FileType nginx setlocal noexpandtab commentstring=#\ %s
-    
+
     " cucumber
     autocmd FileType cucumber inoremap <silent> <buffer> <Bar> <Bar><Esc>:call <SID>BarAlign()<CR>a
 augroup END
