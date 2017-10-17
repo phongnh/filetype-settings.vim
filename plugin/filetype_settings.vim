@@ -25,6 +25,7 @@ endfunction
 
 command! -nargs=0 ToggleBarAlign call <SID>ToggleBarAlign()
 
+nnoremap <silent> =oa :ToggleBarAlign<CR>
 nnoremap <silent> coa :ToggleBarAlign<CR>
 
 augroup FiletypeSettingsPlugin
