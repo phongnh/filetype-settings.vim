@@ -151,7 +151,8 @@ augroup FiletypeSettingsPlugin
     " Ruby-related
     autocmd FileType ruby call s:SetupRubyConverters()
 
-    autocmd FileType ruby,eruby,yaml,haml,markdown,less,sass,scss,coffee,cucumber,html.handlebars setlocal tabstop=2 shiftwidth=2
+    autocmd FileType ruby,eruby,yaml,haml,markdown,less,sass,scss,coffee,cucumber,html.handlebars,handlebars
+                \ setlocal tabstop=2 shiftwidth=2
 
     autocmd FileType ruby,yaml,eruby,coffee,haml let b:surround_{char2nr('#')} = "#{\r}"
     autocmd FileType eruby call s:SetupRubyConverters()       |
