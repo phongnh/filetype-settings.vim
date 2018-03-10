@@ -48,8 +48,13 @@ augroup FiletypeSettingsPlugin
     autocmd BufNewFile,BufRead *.hamlc setfiletype haml
 
     " Ruby-related
-    autocmd FileType ruby,eruby,yaml,haml,markdown,less,sass,scss,coffee,cucumber,html.handlebars,handlebars
+    autocmd FileType ruby,eruby,yaml,haml,markdown,less,sass,scss,coffee,cucumber,html.handlebars,hbs,handlebars
                 \ setlocal tabstop=2 shiftwidth=2
+
+    autocmd FileType html.handlebars,hbs,handlebars
+                \ let b:surround_{char2nr('{')} = "{{\r}}"  |
+                \ let b:surround_{char2nr('}')} = "{{\r}}"  |
+                \ let b:surround_{char2nr('#')} = "{{#\r}}"
 
     autocmd FileType ruby,yaml,eruby,coffee,haml let b:surround_{char2nr('#')} = "#{\r}"
     autocmd FileType eruby
