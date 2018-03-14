@@ -102,8 +102,7 @@ augroup FiletypeSettingsPlugin
     autocmd FileType help,qf,godoc,gedoc nnoremap <silent> <buffer> q :close<CR>
 
     " Folding
-    autocmd FileType vim setlocal foldmethod=marker foldmarker={{{,}}}
-    autocmd FileType nginx,puppet,c,javascript,go,less,css setlocal foldmethod=marker foldmarker={,}
+    autocmd FileType vim,nginx,puppet,c,javascript,go,less,css setlocal foldmethod=marker foldmarker={,}
 
     " nginx
     autocmd FileType nginx setlocal noexpandtab commentstring=#\ %s
@@ -112,7 +111,7 @@ augroup FiletypeSettingsPlugin
     autocmd FileType cucumber inoremap <silent> <buffer> <Bar> <Bar><Esc>:call <SID>BarAlign()<CR>a
 augroup END
 
-" Ruby Converters {{{
+" Ruby Converters {
 if get(g:, 'enable_ruby_converters', 1)
     function! s:SetupRubyConverters() abort
         " https://robots.thoughtbot.com/convert-ruby-1-8-to-1-9-hash-syntax
@@ -140,10 +139,10 @@ if get(g:, 'enable_ruby_converters', 1)
         autocmd FileType ruby,eruby,haml call s:SetupRubyConverters()
     augroup END
 endif
-" }}}
+" }
 
 
-" RSpec Converters {{{
+" RSpec Converters {
 if get(g:, 'enable_rspec_converters', 1)
     function! s:convert_rspec_syntax(old_syntax, expect, receive, bang) abort
         let prefix = '%s/\A\zs\([^ ]\+\)'
@@ -220,6 +219,6 @@ if get(g:, 'enable_rspec_converters', 1)
         autocmd BufNewFile,BufRead *_spec.rb call s:SetupRSpecConverts()
     augroup END
 endif
-" }}}
+" }
 
 let g:loaded_filetype_settings = 1
