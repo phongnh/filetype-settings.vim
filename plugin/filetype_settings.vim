@@ -1,4 +1,4 @@
-if exists('g:loaded_filetype_settings')
+if get(g:, 'loaded_filetype_settings', 0)
     finish
 endif
 
@@ -52,6 +52,7 @@ augroup FiletypeSettingsPlugin
                 \ setlocal tabstop=2 shiftwidth=2
 
     autocmd FileType html.handlebars,hbs,handlebars
+                \ setlocal commentstring={{!--\ %s\ --}}    |
                 \ let b:surround_{char2nr('{')} = "{{\r}}"  |
                 \ let b:surround_{char2nr('}')} = "{{\r}}"  |
                 \ let b:surround_{char2nr('#')} = "{{#\r}}"
