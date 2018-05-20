@@ -16,6 +16,6 @@ function! s:ToggleBarAlign() abort
     endif
 endfunction
 
-nnoremap <silent> =o<Bar> :call <SID>ToggleBarAlign()<CR>
+nnoremap <silent> yo<Bar> :call <SID>ToggleBarAlign()<CR>
 
 let g:loaded_filetype_settings = 1
