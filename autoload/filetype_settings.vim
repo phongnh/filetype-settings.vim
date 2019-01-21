@@ -30,7 +30,7 @@ function! filetype_settings#setup_ruby_converters() abort
     " %s/\"\([^"]*\)\"/'\1'/gc
 
     " My pattern
-    command! -buffer -nargs=0 ConvertRubyString %s/\"\(\(.*#{.*\)\@!\&\([^'"]*\)\)\"/'\1'/egc
+    command! -buffer -nargs=0 ConvertRubyString %s/\"\(\(.*#{.*\)\@!\&\([^'"\\]*\)\)\"/'\1'/egc
 endfunction
 " }
 
