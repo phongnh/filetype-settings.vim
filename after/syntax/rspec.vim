@@ -6,6 +6,6 @@ let b:surround_{char2nr('e')} = "expect(\r)"
 let b:surround_{char2nr('E')} = "expect_any_instance_of(\r)"
 let b:surround_{char2nr('c')} = "expect { \r }"
 
-if get(g:, 'enable_rspec_converters')
+if get(g:, 'enable_rspec_converters', 0)
     call filetype_settings#setup_rspec_converters()
 endif
