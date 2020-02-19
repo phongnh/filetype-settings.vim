@@ -1,6 +1,6 @@
 augroup FiletypeSettingsDetect
     autocmd!
-    autocmd BufNewFile,BufRead *.nvim,{.,}init.vim.*,{.,}vimrc.* setfiletype vim
+    autocmd BufNewFile,BufRead *.nvim,{*.,}init.vim.*,{*.,}vimrc.* setfiletype vim
     autocmd BufNewFile,BufRead *.fastercsv,*.prawn,{*.,}pryrc*,{*.,}irbrc*,{*.,}railsrc* setfiletype ruby
     autocmd BufNewFile,BufRead *.zsh-theme setfiletype zsh
     autocmd BufNewFile,BufRead {,*}.tigrc setfiletype tigrc
