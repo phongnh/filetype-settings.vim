@@ -8,4 +8,5 @@ augroup FiletypeSettingsDetect
     autocmd BufNewFile,BufRead .gemrc setfiletype yaml
     autocmd BufNewFile,BufRead *.html.inky setlocal filetype=html.eruby
     autocmd BufNewFile,BufRead *.tmux.conf setfiletype tmux
+    autocmd BufNewFile,BufRead */kitty/*.conf setfiletype conf
 augroup END
