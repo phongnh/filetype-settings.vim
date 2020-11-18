@@ -16,7 +16,9 @@ function! s:ToggleBarAlign() abort
     endif
 endfunction
 
-command! -nargs=0 ToggleBarAlign call <SID>ToggleBarAlign()
-nnoremap <silent> yo<Bar> :ToggleBarAlign<CR>
+if exists(':Tabularize') == 2
+    command! -nargs=0 ToggleBarAlign call <SID>ToggleBarAlign()
+    nnoremap <silent> yo<Bar> :ToggleBarAlign<CR>
+endif
 
 let g:loaded_filetype_settings = 1
