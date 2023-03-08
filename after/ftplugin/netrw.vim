@@ -1,3 +1,3 @@
 setlocal bufhidden=delete
 
-nnoremap <silent> <buffer> qq :close<CR>
+nnoremap <silent> <buffer> qq :<C-u>close<CR>
