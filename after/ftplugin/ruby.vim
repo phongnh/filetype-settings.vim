@@ -6,4 +6,4 @@ endif
 
 let b:surround_{char2nr('#')} = "#{\r}"
 
-command! -buffer ConvertRubyHashSyntax %s/:\([^ ]*\)\(\s*\)=>/\1:/gc
+command! -buffer ConvertRubyHashSyntax :%s/:\([^ ]*\)\(\s*\)=>/\1:/gc
