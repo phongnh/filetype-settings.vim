@@ -1,7 +1,7 @@
 augroup FiletypeSettingsDetect
     autocmd!
-    autocmd BufNewFile,BufRead {*.,}vimrc.{before,bundle,bundles,local} setfiletype vim
-    autocmd BufNewFile,BufRead {*.,}{init,editor}.lua.{before,bundle,bundles,local} setfiletype lua
+    autocmd BufNewFile,BufRead {*.,}vimrc.{bundles,local} setfiletype vim
+    autocmd BufNewFile,BufRead {*.,}{init,editor}.lua.{bundles,local} setfiletype lua
     autocmd BufNewFile,BufRead *.gemfile,*.fastercsv,*.prawn,{*.,}pryrc*,{*.,}irbrc*,{*.,}railsrc* setfiletype ruby
     autocmd BufNewFile,BufRead *.zsh-theme setfiletype zsh
     autocmd BufNewFile,BufRead {,*}.tigrc setfiletype tigrc
