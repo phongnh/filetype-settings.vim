@@ -1,3 +1,1 @@
-setlocal iskeyword+=-
-setlocal iskeyword+=#
-setlocal iskeyword+=.
+setlocal iskeyword+=- iskeyword+=# iskeyword+=.

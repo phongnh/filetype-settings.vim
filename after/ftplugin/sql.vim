@@ -1,2 +1,2 @@
-setlocal omnifunc=
 setlocal commentstring=--\ %s
+setlocal omnifunc=

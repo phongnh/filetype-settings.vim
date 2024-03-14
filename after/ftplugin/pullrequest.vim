@@ -1,2 +1,1 @@
-setlocal spell
-setlocal cursorline
+setlocal spell cursorline
