@@ -4,7 +4,7 @@ augroup FiletypeSettingsDetect
     autocmd BufNewFile,BufRead init.lua.local,*.{init,editor}.lua.{bundles,local} setfiletype lua
     autocmd BufNewFile,BufRead *.gemfile,*.fastercsv,*.prawn,{*.,}pryrc*,{*.,}irbrc*,{*.,}railsrc* setfiletype ruby
     autocmd BufNewFile,BufRead *.zsh-theme setfiletype zsh
-    autocmd BufNewFile,BufRead {,*}.tigrc setfiletype tigrc
+    autocmd BufNewFile,BufRead tigrc,*.tigrc setfiletype tigrc
     autocmd BufNewFile,BufRead *.inky-haml,*.haml,*.hamlbars,*.hamlc setfiletype haml
     autocmd BufNewFile,BufRead .gemrc setfiletype yaml
     autocmd BufNewFile,BufRead *.html.inky setlocal filetype=html.eruby
