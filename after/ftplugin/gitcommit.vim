@@ -1,2 +1,1 @@
-setlocal textwidth=72 spell cursorline
-setlocal omnifunc=
+setlocal spell cursorline textwidth=72

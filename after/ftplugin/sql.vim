@@ -1,2 +1,3 @@
-setlocal commentstring=--\ %s
-setlocal omnifunc=
+if exists('+omnifunc')
+    setlocal omnifunc=
+endif
